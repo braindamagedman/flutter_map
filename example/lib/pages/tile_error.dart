@@ -21,7 +21,7 @@ class ErrorTileBuilder extends StatelessWidget {
           TileLayer(
             // obviously wrong url template
             urlTemplate: 'https://example.com/{z}/{y}/{x}',
-            tileBuilder: (context, tileWidget, tile) {
+            tileBuilder: (context, tileWidget, tile, _) {
               if (tile.loadError) {
                 return Center(
                   child: Text('${tile.coordinates.z}'

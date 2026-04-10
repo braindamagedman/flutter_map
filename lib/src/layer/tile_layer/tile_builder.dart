@@ -3,7 +3,7 @@ import 'package:flutter_map/flutter_map.dart';
 
 /// Builder function that returns a [TileBuilder] instance.
 typedef TileBuilder = Widget Function(
-    BuildContext context, Widget tileWidget, TileImage tile);
+    BuildContext context, Widget tileWidget, TileImage tile, DateTime? dt);
 
 /// Applies inversion color matrix on Tiles container which may simulate Dark mode.
 Widget darkModeTilesContainerBuilder(

@@ -27,6 +27,18 @@ class WMSLayerPage extends StatelessWidget {
             ),
             subdomains: const ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'],
             userAgentPackageName: 'dev.fleaflet.flutter_map.example',
+            tileBuilder:
+                (BuildContext context, Widget tileWidget, TileImage tile, dt) {
+              return Stack(
+                children: [
+                  tileWidget,
+                  Text(
+                    'State created at: $dt',
+                    style: const TextStyle(color: Colors.white),
+                  ),
+                ],
+              );
+            },
           ),
           RichAttributionWidget(
             popupInitialDisplayDuration: const Duration(seconds: 5),

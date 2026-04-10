@@ -43,7 +43,7 @@ class _RetinaPageState extends State<RetinaPage> {
         null => RetinaMode.isHighDensity(context),
         _ => retinaMode!,
       },
-      tileBuilder: (context, tileWidget, _) => DecoratedBox(
+      tileBuilder: (context, tileWidget, _, __) => DecoratedBox(
         decoration: BoxDecoration(
           border: Border.all(width: 2, color: Colors.white),
         ),

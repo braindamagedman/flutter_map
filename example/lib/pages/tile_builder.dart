@@ -19,7 +19,7 @@ class TileBuilderPageState extends State<TileBuilderPage> {
   bool darkMode = true;
 
   // mix of [coordinateDebugTileBuilder] and [loadingTimeDebugTileBuilder] from tile_builder.dart
-  Widget tileBuilder(BuildContext context, Widget tileWidget, TileImage tile) {
+  Widget tileBuilder(BuildContext context, Widget tileWidget, TileImage tile, _) {
     final coords = tile.coordinates;
 
     return DecoratedBox(

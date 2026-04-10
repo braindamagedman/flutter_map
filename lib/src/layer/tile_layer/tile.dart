@@ -49,6 +49,8 @@ class Tile extends StatefulWidget {
 }
 
 class _TileState extends State<Tile> {
+  final createdAt = DateTime.now();
+
   @override
   void initState() {
     super.initState();
@@ -74,7 +76,7 @@ class _TileState extends State<Tile> {
           widget.currentPixelOrigin.dy,
       width: widget.scaledTileDimension,
       height: widget.scaledTileDimension,
-      child: widget.tileBuilder?.call(context, _tileImage, widget.tileImage) ??
+      child: widget.tileBuilder?.call(context, _tileImage, widget.tileImage, createdAt) ??
           _tileImage,
     );
   }

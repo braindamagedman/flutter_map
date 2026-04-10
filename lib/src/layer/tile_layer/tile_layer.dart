@@ -562,6 +562,7 @@ class _TileLayerState extends State<TileLayer> with TickerProviderStateMixin {
         .map((tileRenderer) => Tile(
               // Must be an ObjectKey, not a ValueKey using the coordinates, in
               // case we remove and replace the TileImage with a different one.
+              // key: ObjectKey(tileRenderer),
               key: TileKey(tileRenderer),
               scaledTileDimension: _tileScaleCalculator.scaledTileDimension(
                 map.zoom,
